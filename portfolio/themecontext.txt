@@ -1,0 +1,9 @@
+
+i need my website in this theme
+primary - #000101
+secondry - #fac714
+background - #fefffe
+icon colour - #fffeff
+accnt colour - #fec412
+use these colour and create my website
+make rounded buttons

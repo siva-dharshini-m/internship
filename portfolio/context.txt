@@ -1,0 +1,27 @@
+
+create a modern portfolio website using html, css , javascript for me
+name: siva Dharshini
+ Hi, I'm Siva Dharshini
+Electronics and Communication Engineering (ECE) Student | IoT Enthusiast | Tech Explorer
+
+I'm an aspiring electronics engineer with a strong passion for Internet of Things (IoT) and emerging technologies. Currently pursuing my Bachelor's in Electronics and Communication Engineering, I enjoy bridging the gap between hardware and software to build smart, connected systems.
+
+I thrive on hands-on learning, constantly exploring microcontrollers, sensors, communication protocols, and real-time applications. Whether it's prototyping a new idea or diving into embedded systems, I find joy in creating practical solutions that connect the digital and physical worlds.
+
+💡 Interests:
+
+IoT-based system design
+
+Embedded systems & microcontrollers (Arduino, ESP32, Raspberry Pi)
+
+visualizing data(dashboards with charts and graphs)
+Sensor interfacing and automation
+
+Real-time data monitoring and cloud integration
+
+📈 Goal: To become a future-ready engineer contributing to smart technologies that make lives better.
+college:saveetha engineering college
+degree:BE ECE 
+school: BMC matriculation higher secondry school
+projects:rain sensor, fire alarm
+
