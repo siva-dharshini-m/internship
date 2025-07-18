@@ -2,229 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RideNow - Modern Ride Map</title>
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
-
-  <!-- Google Fonts & Icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siva Dharshini Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f3f4f6;
+      background: #f3f4f6;
+      color: #111827;
+      line-height: 1.6;
     }
     header {
       background: #111827;
-      color: #fff;
-      padding: 16px;
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      font-size: 1.5rem;
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .control-box {
-      position: absolute;
-      top: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fff;
-      padding: 20px;
-      border-radius: 16px;
-      width: 90%;
-      max-width: 420px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-      z-index: 1000;
+    header h1 {
+      font-size: 2.5rem;
     }
-    .input-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #1f2937;
+      text-align: center;
+    }
+    p {
+      font-size: 1rem;
       margin-bottom: 15px;
     }
-    .input-group i {
-      font-size: 1.2rem;
-      color: #111827;
-    }
-    .input-group input {
-      flex: 1;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 1rem;
-    }
-    button {
-      width: 100%;
-      padding: 14px;
-      font-size: 1rem;
-      background: #111827;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background: #1f2937;
-    }
-    #map {
-      height: 100vh;
-      width: 100%;
-    }
-
-    /* Style for project section */
-    #projects {
-      padding: 40px 20px;
-      background-color: #f9f9f9;
-    }
-    #projects h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
-    .project {
+    ul {
+      list-style: disc;
+      margin-left: 20px;
       margin-bottom: 20px;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .project h3 {
-      margin-bottom: 10px;
-    }
-    .project a {
+    a {
       color: #2563eb;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+    }
+    .project, .contact-info {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      color: white;
     }
   </style>
 </head>
 <body>
 
-  <header>🚘 RideNow - Book Your Ride</header>
+  <header>
+    <h1>Siva Dharshini</h1>
+    <p>ECE Student | IoT Enthusiast</p>
+  </header>
 
-  <div class="control-box">
-    <div class="input-group">
-      <i class="bi bi-geo-alt-fill"></i>
-      <input type="text" id="from" placeholder="Pickup location (e.g. Anna Nagar)" />
-    </div>
-    <div class="input-group">
-      <i class="bi bi-flag-fill"></i>
-      <input type="text" id="to" placeholder="Destination (e.g. Chennai Airport)" />
-    </div>
-    <button onclick="showRoute()">Get Route 🚗</button>
-  </div>
+  <section id="about">
+    <h2>👩‍💻 About Me</h2>
+    <p>Hi! I'm Siva Dharshini, an Electronics and Communication Engineering (ECE) student. I have a keen interest in the Internet of Things (IoT) and enjoy exploring technology through hands-on projects.</p>
+  </section>
 
-  <div id="map"></div>
+  <section id="skills">
+    <h2>🛠️ Skills</h2>
+    <ul>
+      <li>IoT (Internet of Things)</li>
+      <li>Embedded Systems Basics</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Node.js (Beginner)</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
 
-  <!-- Project Section -->
   <section id="projects">
-    <h2>My Projects</h2>
+    <h2>🚀 My Projects</h2>
 
     <div class="project">
       <h3>Live Sensor Dashboard</h3>
-      <p>A simple live dashboard that displays sensor data in real-time.</p>
-      <a href="https://siva-dharshini-m.github.io/portfolio/liveSensordashboard.html" target="_blank">View Project</a>
+      <p>A real-time dashboard showing sensor data using HTML, CSS, and static values.</p>
+      <a href="https://siva-dharshini-m.github.io/portfolio/liveSensordashboard.html" target="_blank">🔗 View Project</a>
     </div>
 
     <div class="project">
       <h3>Navigation Using LeafletJS</h3>
-      <p>A modern route planner using LeafletJS and OpenStreetMap for interactive navigation.</p>
-      <a href="https://siva-dharshini-m.github.io/portfolio/NavigationUsingLeafletJs/" target="_blank">View Project</a>
+      <p>A map-based application using LeafletJS and OpenStreetMap to get routes between locations.</p>
+      <a href="https://siva-dharshini-m.github.io/portfolio/NavigationUsingLeafletJs/" target="_blank">🔗 View Project</a>
     </div>
   </section>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  <section id="contact">
+    <h2>📞 Contact</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> siva.dharshini@example.com</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/siva-dharshini-m" target="_blank">github.com/siva-dharshini-m</a></p>
+    </div>
+  </section>
 
-  <script>
-    const map = L.map('map').setView([13.0827, 80.2707], 10);
+  <footer>
+    <p>© 2025 Siva Dharshini. All rights reserved.</p>
+  </footer>
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    let routingControl;
-
-    const createIcon = (emoji) => L.divIcon({
-      html: `<div style="font-size: 24px;">${emoji}</div>`,
-      className: '',
-      iconSize: [30, 42],
-      iconAnchor: [15, 42],
-    });
-
-    async function showRoute() {
-      const from = document.getElementById("from").value;
-      const to = document.getElementById("to").value;
-
-      if (!from || !to) {
-        alert("Please enter both pickup and destination.");
-        return;
-      }
-
-      const fromCoords = await geocode(from);
-      const toCoords = await geocode(to);
-
-      if (!fromCoords || !toCoords) {
-        alert("Unable to locate one or both locations.");
-        return;
-      }
-
-      if (routingControl) {
-        map.removeControl(routingControl);
-      }
-
-      routingControl = L.Routing.control({
-        waypoints: [
-          L.latLng(fromCoords[0], fromCoords[1]),
-          L.latLng(toCoords[0], toCoords[1])
-        ],
-        createMarker: function (i, wp, nWps) {
-          if (i === 0) {
-            return L.marker(wp.latLng, { icon: createIcon("📍") }).bindPopup("Pickup");
-          } else if (i === nWps - 1) {
-            return L.marker(wp.latLng, { icon: createIcon("🏁") }).bindPopup("Destination");
-          }
-        },
-        lineOptions: {
-          styles: [{ color: '#111827', weight: 6 }]
-        },
-        routeWhileDragging: false,
-        draggableWaypoints: false,
-        addWaypoints: false
-      }).addTo(map);
-
-      map.fitBounds([fromCoords, toCoords], { padding: [50, 50] });
-    }
-
-    async function geocode(query) {
-      const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
-      try {
-        const response = await fetch(url);
-        const results = await response.json();
-        if (results.length > 0) {
-          return [parseFloat(results[0].lat), parseFloat(results[0].lon)];
-        } else {
-          return null;
-        }
-      } catch (error) {
-        console.error("Geocoding failed", error);
-        return null;
-      }
-    }
-  </script>
 </body>
 </html>
